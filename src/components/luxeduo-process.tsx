@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 import { useEffect, useRef, useState } from "react";
 import { QUOTE_HREF } from "@/lib/navigation";
 
@@ -277,7 +278,16 @@ export function LuxeDuoProcess() {
         </div>
 
         <div className="process-cta mx-auto mt-10 flex flex-col items-center text-center sm:mt-12">
-          <Link href={QUOTE_HREF} className="process-quote-cta">
+          <Link
+            href={QUOTE_HREF}
+            className="process-quote-cta"
+            onClick={() =>
+              track("booking_click", {
+                location: "what_to_expect",
+                label: "GET MY FREE QUOTE",
+              })
+            }
+          >
             Get My Free Quote <span aria-hidden="true">→</span>
           </Link>
           <p className="mt-3 text-[0.78rem] tracking-[0.04em] text-ink/48">

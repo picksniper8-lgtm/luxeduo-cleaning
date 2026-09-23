@@ -78,7 +78,12 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 justify-self-end lg:flex">
           <CallButton />
-          <ButtonLink href={HEADER_QUOTE_HREF} size="nav">
+          <ButtonLink
+            href={HEADER_QUOTE_HREF}
+            size="nav"
+            trackingLocation="header"
+            trackingLabel="GET MY FREE QUOTE"
+          >
             Get My Free Quote
           </ButtonLink>
         </div>
@@ -121,6 +126,8 @@ export function SiteHeader() {
             href={HEADER_QUOTE_HREF}
             className="mt-5 w-full"
             size="default"
+            trackingLocation="header"
+            trackingLabel="GET MY FREE QUOTE"
           >
             Get My Free Quote
           </ButtonLink>

@@ -221,6 +221,8 @@ export function LuxeDuoExperience() {
             <ButtonLink
               href={QUOTE_HREF}
               className="experience-quote-cta min-h-[3.65rem] w-full sm:w-[18.5rem]"
+              trackingLocation="meet_luxeduo"
+              trackingLabel="GET MY FREE QUOTE"
             >
               Get My Free Quote{" "}
               <span className="experience-cta-arrow" aria-hidden="true">

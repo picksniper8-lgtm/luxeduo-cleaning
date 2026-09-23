@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 
 type ButtonLinkProps = {
   href: string;
@@ -6,6 +9,8 @@ type ButtonLinkProps = {
   variant?: "primary" | "secondary";
   size?: "default" | "nav";
   className?: string;
+  trackingLocation?: string;
+  trackingLabel?: string;
 };
 
 const variantClass = {
@@ -26,10 +31,20 @@ export function ButtonLink({
   variant = "primary",
   size = "default",
   className = "",
+  trackingLocation,
+  trackingLabel,
 }: ButtonLinkProps) {
   return (
     <Link
       href={href}
+      onClick={() => {
+        if (trackingLocation && trackingLabel) {
+          track("booking_click", {
+            location: trackingLocation,
+            label: trackingLabel,
+          });
+        }
+      }}
       className={`inline-flex items-center justify-center gap-2 rounded-[3px] font-medium uppercase transition-[color,background-color,border-color,transform] duration-300 ease-out hover:-translate-y-px focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${variantClass[variant]} ${sizeClass[size]} ${className}`}
     >
       {children}

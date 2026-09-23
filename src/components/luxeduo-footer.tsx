@@ -228,6 +228,8 @@ export function LuxeDuoFooter() {
             <ButtonLink
               href={BOOKING_URL}
               className="footer-booking-button mt-7 w-full"
+              trackingLocation="footer"
+              trackingLabel="BOOK MY CLEANING"
             >
               Book My Cleaning
               <span aria-hidden="true">→</span>

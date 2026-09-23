@@ -180,6 +180,8 @@ export function LuxeDuoServiceArea() {
             <ButtonLink
               href={QUOTE_HREF}
               className="service-area-quote w-full min-h-[3.35rem] sm:w-[17.5rem]"
+              trackingLocation="service_area"
+              trackingLabel="GET MY FREE QUOTE"
             >
               Get My Free Quote <span aria-hidden="true">→</span>
             </ButtonLink>

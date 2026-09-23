@@ -135,6 +135,8 @@ export function LuxeDuoFaq() {
             <ButtonLink
               href={QUOTE_HREF}
               className="faq-quote w-full min-h-[3.35rem] sm:w-[17.5rem]"
+              trackingLocation="faq"
+              trackingLabel="GET MY FREE QUOTE"
             >
               Get My Free Quote <span aria-hidden="true">→</span>
             </ButtonLink>

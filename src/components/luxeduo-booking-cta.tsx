@@ -106,6 +106,8 @@ export function LuxeDuoBookingCta() {
             <ButtonLink
               href={BOOKING_URL}
               className="booking-cta-button w-full min-h-[3.75rem] sm:w-[20.5rem]"
+              trackingLocation="final_booking"
+              trackingLabel="BOOK MY CLEANING"
             >
               Book My Cleaning
               <span className="booking-cta-arrow" aria-hidden="true">

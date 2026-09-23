@@ -74,7 +74,11 @@ export function Hero() {
           </p>
 
           <div className="reveal reveal-delay-5 mt-8 flex flex-col items-start gap-3 sm:mt-9 sm:flex-row sm:items-center">
-            <ButtonLink href={QUOTE_HREF}>
+            <ButtonLink
+              href={QUOTE_HREF}
+              trackingLocation="hero"
+              trackingLabel="GET MY FREE QUOTE"
+            >
               Get My Free Quote <span aria-hidden="true">→</span>
             </ButtonLink>
             <ButtonLink href="#services" variant="secondary">
