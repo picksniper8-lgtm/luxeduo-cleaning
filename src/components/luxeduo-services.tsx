@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { QUOTE_HREF } from "@/lib/navigation";
 
 const SERVICES = [
   {
@@ -98,15 +96,6 @@ function ServiceCard({
           </li>
         ))}
       </ul>
-
-      <div className="mt-auto w-full pt-4">
-        <Link href={QUOTE_HREF} className="service-learn-more">
-          Learn More{" "}
-          <span className="service-learn-more-arrow" aria-hidden="true">
-            →
-          </span>
-        </Link>
-      </div>
     </article>
   );
 }
